@@ -10,7 +10,7 @@ const authUser = require('./routers/auth')
 //const authUser = require('./routers/auth')(aa)
 const path = require("path")
 const cookieParser = require('cookie-parser')
-const PORT = process.env.PORT ||  3001
+const port = process.env.PORT ||  3001
 const mongoose = require('mongoose');
 const URI = 'mongodb://localhost:27017/testdb'
 // const options = {
@@ -24,8 +24,8 @@ mongoose
 .then(()=>{
     console.log("Connect to db")
     //InitRole()
-    server.listen(PORT,()=>{
-        console.log(`Server is listening on port ${PORT}`)
+    server.listen(port,()=>{
+        console.log(`Server is listening on port ${port}`)
     })
 }).catch((err) => {
     console.log(err)
